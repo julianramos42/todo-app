@@ -1,18 +1,18 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
 }
 
-main{
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 1%;
 }
 
-nav{
+nav {
   display: flex;
   flex-direction: column;
   width: 600px;
@@ -20,12 +20,12 @@ nav{
   margin-bottom: 20px;
 }
 
-.status{
+.status {
   display: flex;
   justify-content: space-around;
 }
 
-.status>div{
+.status>div {
   width: 100px;
   display: flex;
   flex-direction: column;
@@ -37,36 +37,36 @@ nav{
   transition: .4s;
 }
 
-.status>div:hover{
+.status>div:hover {
   background-color: rgba(189, 189, 189, 0.3);
 }
 
-.status h3{
+.status h3 {
   font-weight: 600;
   font-size: 14px;
   line-height: 17.07px;
 }
 
-.active-page{
+.active-page {
   background-color: rgba(47, 128, 237, 1);
   width: 100%;
   border: 2px solid rgba(47, 128, 237, 1);
   border-radius: 50px 50px 0 0;
 }
 
-.status-bar{
+.status-bar {
   width: 100%;
   border: 1px solid rgba(189, 189, 189, 1);
 }
 
-.add-container{
+.add-container {
   display: flex;
   gap: 20px;
   width: 600px;
   margin-bottom: 20px;
 }
 
-.add-container input{
+.add-container input {
   width: 80%;
   height: 50px;
   border: 1px solid rgba(189, 189, 189, 1);
@@ -75,7 +75,7 @@ nav{
   outline: none;
 }
 
-.add-btn{
+.add-btn {
   width: 20%;
   height: 50px;
   background-color: rgba(47, 128, 237, 1);
@@ -86,11 +86,11 @@ nav{
   transition: .4s;
 }
 
-.add-btn:hover{
+.add-btn:hover {
   background-color: rgba(47, 100, 255, 1)
 }
 
-.todo-container{
+.todo-container {
   width: 600px;
   display: flex;
   flex-direction: column;
@@ -98,45 +98,45 @@ nav{
   gap: 20px;
 }
 
-.todo-container input{
+.todo-container input {
   height: 20px;
   width: 20px;
 }
 
-.oneTask{
+.oneTask {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.oneTask i{
+.oneTask i {
   color: rgba(189, 189, 189, 1);
   cursor: pointer;
   transition: .4s;
 }
 
-.oneTask i:hover{
+.oneTask i:hover {
   padding-right: 5px;
 }
 
-label{
+label {
   display: flex;
   gap: 5px;
   align-items: center;
 }
 
-.completed{
+.completed {
   text-decoration: line-through;
 }
 
-.del-container{
+.del-container {
   display: flex;
   width: 600px;
   margin-top: 20px;
   justify-content: flex-end;
 }
 
-.del-container button{
+.del-container button {
   width: 100px;
   height: 40px;
   background-color: rgba(235, 87, 87, 1);
@@ -147,6 +147,24 @@ label{
   transition: .4s;
 }
 
-.del-container button:hover{
+.del-container button:hover {
   background-color: rgba(255, 50, 50, 1)
+}
+
+@media (max-width: 767px) {
+  nav {
+    width: 80%;
+  }
+
+  .add-container {
+    width: 80%;
+  }
+
+  .todo-container {
+    width: 80%;
+  }
+
+  .del-container {
+    width: 80%;
+  }
 }
