@@ -12,7 +12,7 @@ function App() {
   let completedBar = useRef()
 
   function createTask() {
-    active.push(task.current.value)
+    active.unshift(task.current.value)
     localStorage.setItem('active', JSON.stringify(active))
     task.current.value = ''
     getData()
@@ -26,7 +26,7 @@ function App() {
   function removeTask(e) {
     if (e.target.checked) {
       let filter = active.filter(task => task !== e.target.parentElement.textContent)
-      completed.push(e.target.parentElement.textContent)
+      completed.unshift(e.target.parentElement.textContent)
       localStorage.setItem('active', JSON.stringify(filter))
       localStorage.setItem('completed', JSON.stringify(completed))
       setTimeout(() => {
@@ -34,7 +34,7 @@ function App() {
       }, 100)
     } else {
       let filter = completed.filter(task => task !== e.target.parentElement.textContent)
-      active.push(e.target.parentElement.textContent)
+      active.unshift(e.target.parentElement.textContent)
       localStorage.setItem('completed', JSON.stringify(filter))
       localStorage.setItem('active', JSON.stringify(active))
       setTimeout(() => {
@@ -65,7 +65,6 @@ function App() {
   }
 
   function removeOneTask(e) {
-    console.log(e.target.id)
     let filter1 = active.filter(task => task !== e.target.id)
     let filter2 = completed.filter(task => task !== e.target.id)
     localStorage.setItem('active', JSON.stringify(filter1))
